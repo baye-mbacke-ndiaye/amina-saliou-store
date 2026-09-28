@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="AMINA SALIOU STORE - Votre style, votre elegance. Boutique de mode feminine senegalaise." />
+  <title>AMINA SALIOU STORE | Boutique feminine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="announcement">Livraison partout au Senegal · Paiement a la livraison disponible</div>
+  <header class="site-header">
+    <a class="brand" href="#shop" aria-label="AMINA SALIOU STORE accueil"><span
+        class="brand-mark">AS</span><span><strong>AMINA SALIOU</strong><small>STORE</small></span></a>
+    <nav class="main-nav" aria-label="Navigation principale"><a href="#shop">Collection</a><a href="#story">La
+        maison</a><a href="#delivery">Livraison</a></nav>
+    <div class="header-actions"><button class="icon-btn" id="adminToggle" title="Ouvrir l'administration"
+        aria-label="Ouvrir l'administration">⚙</button><button class="bag-btn" id="cartToggle">Sac <span
+          id="cartCount">0</span></button></div>
+  </header>
+
+  <main id="shop">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Nouvelle collection · Dakar</p>
+        <h1>L'elegance<br /><em>en mouvement.</em></h1>
+        <p class="hero-text">Des silhouettes pensees pour les femmes qui avancent avec grace, ici et partout dans le
+          monde.</p><a class="primary-btn" href="#products">Explorer la collection <span>↗</span></a>
+      </div>
+      <div class="hero-image">
+        <div class="hero-note"><span>01</span><b>La lumiere<br />du quotidien</b></div>
+      </div>
+    </section>
+
+    <section class="manifesto" id="story">
+      <p class="eyebrow">Notre signature</p>
+      <h2>Votre style,<br /><em>votre elegance.</em></h2>
+      <p>AMINA SALIOU STORE celebre une feminite libre, contemporaine et profondement senegalaise. Chaque piece est
+        choisie pour traverser les saisons avec vous.</p><a href="#products" class="text-link">Decouvrir notre univers
+        <span>→</span></a>
+    </section>
+
+    <section class="collection" id="products">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Selection du moment</p>
+          <h2>Les essentiels</h2>
+        </div>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="services" id="delivery">
+      <div><span class="service-icon">✦</span>
+        <h3>Livraison locale</h3>
+        <p>Dakar et regions, avec des tarifs clairs avant validation.</p>
+      </div>
+      <div><span class="service-icon">◌</span>
+        <h3>Paiement flexible</h3>
+        <p>Wave, Orange Money et paiement a la livraison.</p>
+      </div>
+      <div><span class="service-icon">♡</span>
+        <h3>Conseil personnalise</h3>
+        <p>Une question ? Notre equipe vous repond sur WhatsApp.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">AS</span>
+      <div><strong>AMINA SALIOU STORE</strong>
+        <p>Votre style, votre elegance.</p>
+      </div>
+    </div>
+    <div>
+      <p class="footer-label">Nous retrouver</p><a id="instagramLink" href="#">Instagram</a><a id="tiktokLink"
+        href="#">TikTok</a><a id="facebookLink" href="#">Facebook</a>
+    </div>
+    <div>
+      <p class="footer-label">Contact</p>
+      <p id="footerPhone">[Numero a modifier]</p>
+      <p id="footerEmail">[Email a modifier]</p>
+      <p id="footerCity">[Ville a modifier], Senegal</p>
+    </div>
+    <div class="footer-admin"><button class="outline-btn" id="footerAdmin">Administration ↗</button></div>
+  </footer>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Votre sac">
+    <div class="drawer-head">
+      <h2>Votre sac</h2><button class="close-btn" data-close="cartDrawer">×</button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-summary">
+      <div><span>Sous-total</span><strong id="cartSubtotal">0 FCFA</strong></div>
+      <div><span>Livraison</span><strong id="cartDelivery">—</strong></div>
+      <div class="total"><span>Total</span><strong id="cartTotal">0 FCFA</strong></div><button class="primary-btn full"
+        id="checkoutBtn">Commander sur WhatsApp <span>↗</span></button>
+      <p class="drawer-hint">Les frais de livraison sont calcules selon votre zone.</p>
+    </div>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+
+  <section class="admin-panel" id="adminPanel">
+    <div class="admin-top">
+      <div>
+        <p class="eyebrow">Espace proprietaire</p>
+        <h2>Administration</h2>
+      </div><button class="close-btn" id="adminClose">×</button>
+    </div>
+    <div class="admin-tabs"><button class="tab active" data-tab="productsAdmin">Produits</button><button class="tab"
+        data-tab="settingsAdmin">Boutique</button><button class="tab" data-tab="deliveryAdmin">Livraison &
+        paiement</button></div>
+    <div class="admin-content">
+      <div id="productsAdmin" class="tab-content active">
+        <div class="admin-section-head">
+          <div>
+            <h3>Catalogue</h3>
+            <p id="productCountLabel">0 articles en ligne</p>
+          </div><button class="primary-btn" id="addProductBtn">+ Ajouter un produit</button>
+        </div>
+        <div id="adminProducts"></div>
+      </div>
+      <div id="settingsAdmin" class="tab-content">
+        <form id="settingsForm" class="settings-grid"></form>
+      </div>
+      <div id="deliveryAdmin" class="tab-content">
+        <form id="deliveryForm" class="settings-grid"></form>
+      </div>
+    </div>
+  </section>
+  <div class="modal" id="productModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="modalTitle">Ajouter un produit</h2><button class="close-btn" data-close="productModal">×</button>
+      </div>
+      <form id="productForm"><input type="hidden" id="productId" /><label>Nom du produit<input required
+            id="productName" /></label><label>Prix (FCFA)<input required type="number" id="productPrice"
+            min="0" /></label><label>Collection<select id="productCategory">
+            <option>Jalabias</option>
+            <option>Sacs</option>
+            <option>Pagnes</option>
+            <option>Accessoires</option>
+          </select></label><label>Image URL<input required id="productImage"
+            placeholder="https://..." /></label><label>Tailles disponibles<input id="productSizes"
+            placeholder="S, M, L, XL" /></label>
+        <div class="modal-actions"><button type="button" class="outline-btn"
+            data-close="productModal">Annuler</button><button type="submit" class="primary-btn">Enregistrer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>
